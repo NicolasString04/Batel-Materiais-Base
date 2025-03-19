@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batel Materials</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Topo da página -->
+        <div class="topo">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='batel-logo.png') }}" alt="Logo Batel Materials">
+            </div>
+            <div class="titulo">
+                <h1>Batel Materials</h1>
+                <p>CONHEÇA NOSSOS PRODUTOS:</p>
+            </div>
+        </div>
+
+        <!-- Lista de produtos -->
+        <div class="produtos">
+            <div class="produto" data-pdf="{{ url_for('pdf_files', filename='ceramics.pdf') }}">CERÂMICAS</div>
+            <div class="produto" data-pdf="{{ url_for('pdf_files', filename='portas.pdf') }}">PORTAS</div>
+            <div class="produto" data-pdf="{{ url_for('pdf_files', filename='balcao.pdf') }}">BALCÕES E PIAS</div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="rodape">
+            <p>2025</p>
+            <p>
+                Contato |
+                <a href="https://www.google.com/maps/place/Batel+Materiais+de+Constru%C3%A7%C3%A3o/@-25.434912,-48.7314419,17z/data=!3m1!4b1!4m6!3m5!1s0x94db7fd9b637140d:0x9244d770da6bc9f6!8m2!3d-25.434912!4d-48.728867!16s%2Fg%2F1vbl8r33?entry=ttu&g_ep=EgoyMDI1MDMxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Endereço</a> |
+                <a href="https://wa.me/5547999843927" target="_blank">Whatsapp</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Seleciona todos os produtos
+        const produtos = document.querySelectorAll('.produto');
+
+        // Adiciona um evento de clique a cada produto
+        produtos.forEach(produto => {
+            produto.addEventListener('click', () => {
+                // Pega o caminho do PDF do atributo data-pdf
+                const pdfPath = produto.getAttribute('data-pdf');
+                // Abre o PDF em uma nova aba
+                window.open(pdfPath, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

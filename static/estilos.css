@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.topo {
+    background-color: green;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-right: 20px;
+}
+
+.titulo {
+    text-align: left;
+}
+
+.topo h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.topo p {
+    font-size: 1.2em;
+}
+
+.produtos {
+    padding: 20px;
+    background-color: green;
+}
+
+.produto {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.produto:hover {
+    background-color: green;
+}
+
+.rodape {
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.rodape p {
+    margin: 5px 0;
+}
+.rodape a {
+    color: inherit; /* Mantém a cor do texto igual ao restante */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.rodape a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
