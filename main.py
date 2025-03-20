@@ -5,7 +5,7 @@ app = Flask(__name__)
 # Rota para a página principal
 @app.route('/')
 def home():
-    return render_template('catalogo.html')
+    return render_template('main.html')
 
 # Rota para servir arquivos estáticos (CSS, imagens, etc.)
 @app.route('/static/<path:filename>')
