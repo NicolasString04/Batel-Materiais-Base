@@ -10,11 +10,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px; /* Adicionado padding para telas menores */
 }
 
 .container {
-    width: 80%;
+    width: 90%; /* Aumentei a largura para telas menores */
     max-width: 800px;
     background-color: #fff;
     border-radius: 10px;
@@ -33,7 +34,7 @@ body {
 }
 
 .logo img {
-    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    width: 200px;
     height: auto;
     margin-right: 20px;
 }
@@ -80,11 +81,69 @@ body {
 .rodape p {
     margin: 5px 0;
 }
+
 .rodape a {
     color: inherit; /* Mantém a cor do texto igual ao restante */
     text-decoration: none; /* Remove o sublinhado do link */
 }
 
 .rodape a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* Media Queries para Telas Menores */
+
+/* Tablets e Telas Pequenas */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Aumenta a largura do container */
+    }
+
+    .logo img {
+        width: 150px; /* Reduz o tamanho da logo */
+    }
+
+    .topo h1 {
+        font-size: 2em; /* Reduz o tamanho do título */
+    }
+
+    .topo p {
+        font-size: 1em; /* Reduz o tamanho do subtítulo */
+    }
+
+    .produto {
+        padding: 12px; /* Reduz o padding dos botões */
+        font-size: 0.9em; /* Reduz o tamanho do texto dos botões */
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .topo {
+        flex-direction: column; /* Coloca a logo e o título em coluna */
+        text-align: center;
+    }
+
+    .logo img {
+        width: 120px; /* Reduz ainda mais o tamanho da logo */
+        margin-right: 0; /* Remove a margem à direita */
+        margin-bottom: 10px; /* Adiciona espaço abaixo da logo */
+    }
+
+    .topo h1 {
+        font-size: 1.8em; /* Reduz o tamanho do título */
+    }
+
+    .topo p {
+        font-size: 0.9em; /* Reduz o tamanho do subtítulo */
+    }
+
+    .produto {
+        padding: 10px; /* Reduz o padding dos botões */
+        font-size: 0.8em; /* Reduz o tamanho do texto dos botões */
+    }
+
+    .rodape {
+        font-size: 0.8em; /* Reduz o tamanho do texto do rodapé */
+    }
 }

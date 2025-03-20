@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batel Materials</title>
+    <title>Batel Materials Catálogo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
 </head>
 <body>
     <div class="container">
-        <!-- Topo da página -->
+
         <div class="topo">
             <div class="logo">
                 <img src="{{ url_for('static', filename='batel-logo.png') }}">
@@ -19,14 +19,14 @@
             </div>
         </div>
 
-        <!-- Lista de produtos -->
+
         <div class="produtos">
             <div class="produto" data-pdf="{{ url_for('pdf_files', filename='ceramics.pdf') }}">CERÂMICAS</div>
             <div class="produto" data-pdf="{{ url_for('pdf_files', filename='portas.pdf') }}">PORTAS</div>
             <div class="produto" data-pdf="{{ url_for('pdf_files', filename='balcao.pdf') }}">BALCÕES E PIAS</div>
         </div>
 
-        <!-- Rodapé -->
+
         <div class="rodape">
             <p>2025</p>
             <p>
@@ -38,10 +38,10 @@
     </div>
 
     <script>
-        // Seleciona todos os produtos
+
         const produtos = document.querySelectorAll('.produto');
 
-        // Adiciona um evento de clique a cada produto
+
         produtos.forEach(produto => {
             produto.addEventListener('click', () => {
                 // Pega o caminho do PDF do atributo data-pdf
